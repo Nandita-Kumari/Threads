@@ -14,6 +14,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage
   
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
@@ -146,7 +147,8 @@ Props) => {
                     className='account-form_image-input'
                     onChange={(e) => handleImage(e, field.onChange)}
                 />
-              </FormControl>              
+              </FormControl>    
+              <FormMessage />
             </FormItem>
           )}
         />
@@ -165,7 +167,8 @@ Props) => {
                     className='account-form_input no-focus'
                     {...field}
                 />
-              </FormControl>              
+              </FormControl>     
+              <FormMessage />         
             </FormItem>
           )}
         />
@@ -184,7 +187,8 @@ Props) => {
                     className='account-form_input no-focus'
                     {...field}
                 />
-              </FormControl>              
+              </FormControl>    
+              <FormMessage />          
             </FormItem>
           )}
         />
@@ -203,7 +207,8 @@ Props) => {
                     className='account-form_input no-focus'
                     {...field}
                 />
-              </FormControl>              
+              </FormControl>   
+              <FormMessage />           
             </FormItem>
           )}
         />
