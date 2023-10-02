@@ -47,7 +47,7 @@ function PostThread({ userId }: {userId: string}) {
     const pathname = usePathname();
 
     const form = useForm({
-        resolver: zodResolver(ThreadValidation),
+       // resolver: zodResolver(ThreadValidation),
         defaultValues: {
             thread: '',
             accountId: userId,
@@ -63,7 +63,7 @@ function PostThread({ userId }: {userId: string}) {
             path: pathname,
         });
         console.log("hello")
-        // router.push("/");
+         router.push("/");
     } catch (error) {
         console.error("Error creating thread:", error);
     }
@@ -79,14 +79,17 @@ function PostThread({ userId }: {userId: string}) {
           control={form.control}
           name="thread"
           render={({ field }) => (
-            <FormItem className='flex flex-col w-full gap-3'>
+            <FormItem className='flex flex-col w-full gap-3'
+            >
+                
               <FormLabel className='text-base semibold text-light-2'>
                 Content
               </FormLabel>
               <FormControl className='no-focus border border-dark-4 bg-dark-3 text-light-1'>
                 <Textarea
+             
                     rows={15}                  
-                    
+                    {...field}
                 />
               </FormControl>     
               <FormMessage />         
